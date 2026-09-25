@@ -1,0 +1,158 @@
+---
+title: "Ordbok - Eksempler"
+format: html
+---
+
+
+## Avsløring
+
+**Definisjon:**
+
+Hendelse der man ved hjelp av publisert data eller statistikk lærer spesifikk og meningsfull informasjon man ikke visste fra før om en statistisk enhet. 
+
+**Eksempel:**
+
+La oss se på en tabell som oppgir gjennomsnittslønnen til de ansatte på en arbeidsplass etter kjønn og aldersgruppe. 
+
+| Alder | Kjønn | Lønn |
+|:---|---:|---:|
+| 20-39 år | Kvinne | 640 000 kr |
+| 20-39 år | Mann | 632 000 kr |
+| 40-59 år | Kvinne | 721 000 kr |
+| 40-59 år | Mann | 742 000 kr |
+| ≥ 60 år | Kvinne | 730 000 kr |
+| ≥ 60 år | Mann | 733 000 kr |
+
+Hvis det kun finnes én mann som er 60 år eller eldre på arbeidsplassen, kan man lese fra tabellen at han må ha en årslønn på 733 000 kroner. 
+
+## Toppkoding
+
+**Definisjon:**
+
+En metode for å redusere risikoen for avsløring der det settes en øvre grense for kvantitative variabler. Verdier over grensen blir erstattet med grenseverdien.  
+
+**Eksempel:** 
+
+| Alder | Antall |
+|------------|----------:|
+| 0-19 år | 45 |
+| 20-39 år | 58 |
+| 40-59 år | 53 |
+| 60 eller eldre | 29 |
+
+Her settes 60 år som en øvre grense. Alle som er 60 år eller eldre plasseres i samme kategori. 
+
+## Dominansregel
+
+**Definisjon:**
+
+Regel som sier at en celleverdi må skjermes dersom de n største bidragsyterne står for mer enn k% av celletotalen.  
+
+**Eksempel:**
+
+|  | 0-29 år | 30-59 år | ≥ 60 år | Total |
+|:---------|:---------|:---------|:---------|:---------|
+| **Kvinne** | 328 | 417 | 0 | 745 |
+| **Mann** | 105 | 395 | 3887 | 4387 |
+| **Total** |433 | 812 | 3887 | 5132 |
+
+La oss bruke dominansregelen med $n=2$ og $k=90$ for å bestemme om celleverdien i "Mann, ≥ 60 år" må skjermes. For å gjøre dette må vi se på datagrunnlaget for tabellen. 
+
+| Alder | Kjønn | Inntekt |
+|:---------|:---------|:---------|
+| 22 | Mann | 105 |
+| 24 | Kvinne | 102 |
+| 25 | Kvinne | 111 |
+| 27 | Kvinne | 115 |
+| 34 | Mann | 108 |
+| 39 | Mann | 121 |
+| 46 | Mann | 166 |
+| 50 | Kvinne | 144 |
+| 58 | Kvinne | 273 |
+| 61 | Mann | 201 |
+| 66 | Mann | 251 |
+| 70 | Mann | 3435 |
+
+De 2 største bidragsyterne til celletotalen for "Mann, ≥ 60 år" bidrar med inntekt 251 og 3435. Til sammen bidrar de altså med
+$(\frac{251+3435}{3887}*100) \% = 94.8 \%$ av celletotalen. 
+
+Dermed sier dominansregelen med $n=2$ og $k=90$ at denne celleverdien må skjermes. 
+
+## Global omkoding
+
+**Definisjon:**
+
+En metode for å redusere risikoen for avsløring der en variabel gjøres mindre detaljert, for eksempel ved å slå sammen kategorier eller gruppere verdier i intervaller. 
+
+**Eksempel (slå sammen kategorier):**
+
+| Sivilstand | Antall |
+|:---|---:|---:|
+| Ugift | 18 |
+| Gift | 23 |
+| Enke/Enkemann | 1 |
+| Separert | 1 |
+| Skilt | 2 |
+
+I denne tabellen er det flere variabelkategorier med lave frekvenser, noe som fører til økt risiko for avsløring. For å redusere risikoen for avsløring er det mulig å slå sammen noen av kategoriene. Et eksempel på dette er følgelde: 
+
+| Sivilstand | Antall |
+|:---|---:|---:|
+| Ugift | 18 |
+| Gift | 23 |
+| Annet | 4 |
+
+
+**Eksempel (gruppere verdier i intervaller):**
+
+Se på tabellen under der ansatte på en arbeidsplass har svart på spørsmålet: "Trives du på jobben?"
+
+| Alder | "Trives du på jobben?" |
+|:---|---:|---:|
+| 22 | Ja |
+| 25 | Nei |
+| 32 | Nei |
+| 38 | Ja |
+| 47 | Ja |
+| 47 | Nei |
+| 52 | Ja |
+| 63 | Nei |
+
+Basert på denne tabellen vil det være relativt enkelt for en ansatt på arbeidsplassen å bestemme hva en annen kollega har svart. En mulig løsning på dette problemet er å lage aldersintervaller.
+
+| Aldersgruppe | "Trives du på jobben?" | Antall |
+|:---------|:---------|:---------|
+| < 40 år | Ja | 2 |
+| < 40 år | Nei | 2 |
+| ≥ 40 år | Ja | 2 |
+| ≥ 40 år | Nei | 2 |
+
+
+
+## Skjerming
+
+**Definisjon:**
+
+**Eksempel:**
+
+## p%-regel
+
+**Definisjon:**
+
+**Eksempel:**
+
+## Støylegging
+
+**Definisjon:**
+
+**Eksempel:**
+
+## Terskelregel
+
+**Definisjon:**
+
+**Eksempel:**
+
+
+
+
